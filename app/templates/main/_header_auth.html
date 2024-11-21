@@ -1,0 +1,13 @@
+<div class="lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 text-center">
+        <a href="/all_auth" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="header__img" src="{{ url_for('static', filename='img/blog_5240815.png') }}" alt="blog">
+        </a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-left">
+          <a href="{{ url_for('user.lk') }}" class="btn btn-outline-light me-2">Личный кабинет</a>
+          <a href="{{ url_for('post.all_no_auth') }}" class="btn btn-warning">Выйти</a>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/libs/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <header class="header">{% include 'main/_header_auth.html' %}</header>
+    <div class="page">
+        <main class="content">
+            {% include 'main/_flash.html' %}
+            <h1 class="flex-basis">{{ self.title() }}</h1>
+            {% block content %}{% endblock %}
+        </main>
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">{% include 'main/_footer.html' %}</footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/blocks/dropdown.js') }}"></script>
+</body>
+</html>

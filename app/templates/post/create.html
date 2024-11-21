@@ -1,0 +1,31 @@
+{% extends 'main/base_auth.html' %}
+
+{% block title %}Создать статью{% endblock %}
+
+{% block content %}
+<form method="post" class="form justify-center">
+    <label class="label" for="theme">Выберите тему:</label>
+    <select class="choice" id="theme" name="theme" >
+        <option label="музыка">Музыка</option>
+        <option label="видеоигры">Bидеоигры</option>
+        <option label="литература">Литература</option>
+        <option label="мода">Мода</option>
+        <option label="искусство">Искусство</option>
+        <option label="комиксы">Комиксы</option>
+        <option label="анимация">Аниме</option>
+        <option label="спорт">Спорт</option>
+        <option label="другое">Другое</option>
+    </select>
+    <div class="fields" contenteditable="true">
+        <textarea name="title" class="input-title" placeholder="Введите заголовок статьи" cols="100" wrap="hard"></textarea><br>
+        <textarea name="text" class="input-text" placeholder="Введите текст статьи" cols="100" rows="20" wrap="hard"></textarea><br>
+        <textarea name="tag" class="input-tags" placeholder="Введите теги" cols="100"></textarea><br>
+        <input value="Добавить" type="submit" class="btn btn-success">
+    </div>
+</form>
+{% endblock %}
+
+
+
+
+

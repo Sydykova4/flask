@@ -1,0 +1,21 @@
+{% extends 'main/base_no_auth.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data" class="form-control d-flex flex-column gap-2">
+    {{ form.csrf_token }}
+    {{ form.name(class="form-control", placeholder="Введите ФИО") }}
+    {{ form.login(class="form-control", placeholder="Введите логин") }}
+    {% if form.login.errors %}
+        <div class="invalid-feedack">
+            {% for error in form.login.errors %}
+                <span>{{ error }}</span>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {{ form.password(class="form-control", placeholder="Введите пароль") }}
+    {{ form.confirm_password(class="form-control", placeholder="Подтвердите пароль") }}
+    {{ form.submit(class="btn btn-success") }}
+</form>
+{% endblock %}

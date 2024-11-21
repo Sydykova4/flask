@@ -1,0 +1,10 @@
+{% extends 'main/base_auth.html' %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{% block content %}
+<h1>Привет, {{ current_user.name }}</h1>
+<a class="links" href="{{ url_for('post.all_auth') }}">Главная</a>
+<a class="links" href="{{ url_for('post.create') }}">Создать пост</a>
+<a class="links" href="{{ url_for('post.my_posts') }}">Мои посты</a>
+{% endblock %}
